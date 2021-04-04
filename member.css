@@ -1,0 +1,128 @@
+:root {
+  --font-color: white;
+  --font-large: 60px;
+  --font-medieum: 30px;
+  --font-small: 20px;
+  --font-smaller: 17px;
+
+  --symbol-color: rgb(241, 145, 55);
+  --page-padding: 30px 100px;
+  --content-padding: 10px 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jockey One", sans-serif;
+  color: var(--font-color);
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.navbar {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--page-padding);
+}
+
+.navbar_logo {
+  font-size: var(--font-medieum);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+}
+
+.navbar_menu li {
+  padding: var(--content-padding);
+  font-size: var(--font-small);
+}
+
+.navbar_menu li :hover {
+  background-color: var(--symbol-color);
+  color: black;
+  border-radius: 40px;
+  padding: var(--content-padding);
+}
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: var(--font-medieum);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+  .navbar_menu.active {
+    display: flex;
+  }
+}
+
+.container h1 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 70px;
+  color: black;
+  font-style: italic;
+}
+.container .image_top {
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.container .image_bottom {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 300px;
+}
+
+.container div {
+  justify-content: center;
+}
+
+.container div div {
+  transform: rotate(45deg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin: 110px;
+}
+
+.container img {
+  width: 1000px;
+  height: 1000px;
+  transform: rotate(-45deg);
+}
